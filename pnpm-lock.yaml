@@ -13,6 +13,7 @@ specifiers:
   '@angular/platform-browser-dynamic': ^15.1.0
   '@angular/router': ^15.1.0
   '@types/jasmine': ~4.3.0
+  '@vercel/analytics': ^0.1.11
   jasmine-core: ~4.5.0
   karma: ~6.4.0
   karma-chrome-launcher: ~3.1.0
@@ -33,6 +34,7 @@ dependencies:
   '@angular/platform-browser': 15.2.1_7j4w6zoz33pkplfc3lxyl3lv3e
   '@angular/platform-browser-dynamic': 15.2.1_62tleqnoqwdrbcas5ykx7xf63m
   '@angular/router': 15.2.1_m5wmoc4v2teqays2xvbdq4lica
+  '@vercel/analytics': 0.1.11
   rxjs: 7.8.0
   tslib: 2.5.0
   zone.js: 0.12.0
@@ -2203,6 +2205,12 @@ packages:
     dependencies:
       '@types/node': 18.14.6
     dev: true
+
+  /@vercel/analytics/0.1.11:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dev: false
 
   /@webassemblyjs/ast/1.11.1:
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==}
