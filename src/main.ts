@@ -9,5 +9,5 @@ import { routes } from "./app/routes";
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(routes)]
 })
-  .then(() => (inject({ mode: isDevMode() ? 'development' : 'production'})))
+  .then(() => (inject({ mode: isDevMode() ? 'development' : 'production' })))
   .catch(err => console.error(err));
