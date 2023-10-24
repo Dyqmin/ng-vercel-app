@@ -16,11 +16,11 @@ export default async function (request: VercelRequest, response: VercelResponse)
     case 'POST':
       const q = request.body;
 
-      const newTodosQuery = await client.sql
+      const createTodoQuery = await client.sql
         `INSERT INTO todos (description, is_done) VALUES (${q['description']}, false);`;
 
       response.status(200).json({
-        todos: newTodosQuery,
+        todos: createTodoQuery.rows,
       });
       break;
     default:

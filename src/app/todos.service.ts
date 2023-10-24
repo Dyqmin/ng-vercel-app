@@ -1,15 +1,18 @@
-import { inject, Injectable } from "@angular/core";
+import { inject, Injectable, signal } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Todo } from "./todo";
-import { map, Observable } from "rxjs";
+import { map, Observable, tap } from "rxjs";
 
 @Injectable()
 export class TodosService {
+  todos = signal<Todo[]>([]);
+
   private readonly _http = inject(HttpClient);
 
   getTodos(): Observable<Todo[]> {
     return this._http.get<{ todos: Todo[] }>('/api/todo').pipe(
-      map((resp) => resp.todos)
+      map((resp) => resp.todos),
+      tap((todos) => this.todos.set(todos))
     );
   }
 
